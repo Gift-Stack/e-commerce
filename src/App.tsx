@@ -1,4 +1,5 @@
-import * as React from "react"
+import * as React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
   ChakraProvider,
   Box,
@@ -7,32 +8,34 @@ import {
   VStack,
   Code,
   Grid,
+  Flex,
   theme,
-} from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+  Image,
+  Container,
+} from '@chakra-ui/react';
+import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { Navbar } from './components/layouts/Navbar';
+import { Body } from './components/layouts/Body';
+import Cart from './components/routes/Cart';
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
-          </Text>
-          <Link
-            color="teal.500"
-            href="https://chakra-ui.com"
-            fontSize="2xl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Chakra
-          </Link>
-        </VStack>
-      </Grid>
-    </Box>
-  </ChakraProvider>
-)
+  <Router>
+    <ChakraProvider theme={theme}>
+      <Box textAlign='center' fontSize='xl'>
+        <Navbar />
+        <Switch>
+          <Route
+            exact
+            path='/'
+            render={() => (
+              <React.Fragment>
+                <Body />
+              </React.Fragment>
+            )}
+          />
+          <Route path='/cart' component={Cart} />
+        </Switch>
+      </Box>
+    </ChakraProvider>
+  </Router>
+);
