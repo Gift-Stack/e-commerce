@@ -7,13 +7,41 @@ import {
   Badge,
   Button,
   Spacer,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Grid,
 } from '@chakra-ui/react';
 import { MdStar } from 'react-icons/md';
 import { MdAddShoppingCart } from 'react-icons/md';
 
 export const Products = ({ product }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box w='100%' borderWidth='1px'>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>{product.product_name}</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Grid></Grid>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme='blue' mr={3} onClick={onClose}>
+              Continue shopping
+            </Button>
+            <Button variant='ghost'>Checkout</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+
       <Image borderRadius='md' src={product.product_avatar} />
       <Flex align='baseline' mt={2} px='2'>
         <Badge colorScheme='pink'>Plus</Badge>
@@ -41,6 +69,7 @@ export const Products = ({ product }) => {
           leftIcon={<MdAddShoppingCart />}
           colorScheme='pink'
           variant='solid'
+          onClick={onOpen}
         >
           Add to cart
         </Button>

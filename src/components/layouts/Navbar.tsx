@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Flex, Spacer, Box, Icon } from '@chakra-ui/react';
+import { Text, Flex, Spacer, Icon } from '@chakra-ui/react';
 import { FaCartPlus } from 'react-icons/fa';
 import { MdGroupWork } from 'react-icons/md';
 
