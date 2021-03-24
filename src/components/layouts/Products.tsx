@@ -1,6 +1,15 @@
 import React from 'react';
-import { Text, Box, Image, Flex, Badge } from '@chakra-ui/react';
+import {
+  Text,
+  Box,
+  Image,
+  Flex,
+  Badge,
+  Button,
+  Spacer,
+} from '@chakra-ui/react';
 import { MdStar } from 'react-icons/md';
+import { MdAddShoppingCart } from 'react-icons/md';
 
 export const Products = ({ product }) => {
   return (
@@ -15,7 +24,7 @@ export const Products = ({ product }) => {
           fontWeight='bold'
           color='pink.800'
         >
-          Verified &bull; Cape Town
+          Verified &bull;
         </Text>
       </Flex>
       <Text mt={2} fontSize='xl' fontWeight='semibold' lineHeight='short'>
@@ -27,6 +36,14 @@ export const Products = ({ product }) => {
         <Text ml={1} fontSize='sm'>
           <b>4.84</b> (190)
         </Text>
+        <Spacer />
+        <Button
+          leftIcon={<MdAddShoppingCart />}
+          colorScheme='pink'
+          variant='solid'
+        >
+          Add to cart
+        </Button>
       </Flex>
     </Box>
   );
