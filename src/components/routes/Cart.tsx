@@ -1,6 +1,7 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Box, Text, Center } from '@chakra-ui/react';
 import ProductContext from '../../context/productContext';
+import { CartItem } from './CartItem';
 
 const Cart = () => {
   const productContext = useContext(ProductContext);
@@ -16,7 +17,7 @@ const Cart = () => {
           Cart is empty
         </Center>
       )}
-      {cart.map((cur) => cur.map((nxt) => <Text>{nxt.product_name}</Text>))}
+      {cart.map((cur) => cur.map((curItem) => <CartItem item={curItem} />))}
     </Box>
   );
 };
