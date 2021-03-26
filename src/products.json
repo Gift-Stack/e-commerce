@@ -4,51 +4,59 @@
     "product_id": 1,
     "product_price": "$119",
     "product_avatar": "https://bit.ly/31cUlg1",
-    "category": "phones"
+    "category": "phones",
+    "inCart": true
   },
   {
     "product_name": "Apple iPhone 8 64gb",
     "product_id": 2,
     "product_price": "$119",
     "product_avatar": "https://bit.ly/3d23GNd",
-    "category": "phones"
+    "category": "phones",
+    "inCart": false
   },
   {
     "product_name": "Nokia 3310, 2 sims ",
     "product_id": 3,
     "product_price": "$119",
     "product_avatar": "https://bit.ly/398hPau",
-    "category": "phones"
+    "category": "phones",
+    "inCart": false
   },
   {
     "product_name": "Apple iPhone X, space grey",
     "product_id": 4,
     "product_price": "$119",
     "product_avatar": "https://bit.ly/3f97crZ",
-    "category": "phones"
+    "category": "phones",
+    "inCart": false
   },
   {
     "product_name": "Modern, Chic Penthouse with Mountain, City & Sea Views",
     "product_id": 5,
     "product_price": "$119",
-    "product_avatar": "https://bit.ly/2k1H1t6"
+    "product_avatar": "https://bit.ly/2k1H1t6",
+    "inCart": false
   },
   {
     "product_name": "Modern, Chic Penthouse with Mountain, City & Sea Views",
     "product_id": 6,
     "product_price": "$119",
-    "product_avatar": "https://bit.ly/2k1H1t6"
+    "product_avatar": "https://bit.ly/2k1H1t6",
+    "inCart": false
   },
   {
     "product_name": "Modern, Chic Penthouse with Mountain, City & Sea Views",
     "product_id": 7,
     "product_price": "$119",
-    "product_avatar": "https://bit.ly/2k1H1t6"
+    "product_avatar": "https://bit.ly/2k1H1t6",
+    "inCart": false
   },
   {
     "product_name": "Modern, Chic Penthouse with Mountain, City & Sea Views",
     "product_id": 8,
     "product_price": "$119",
-    "product_avatar": "https://bit.ly/2k1H1t6"
+    "product_avatar": "https://bit.ly/2k1H1t6",
+    "inCart": false
   }
 ]

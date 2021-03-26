@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Text,
   Box,
@@ -19,9 +20,21 @@ import {
 } from '@chakra-ui/react';
 import { MdStar } from 'react-icons/md';
 import { MdAddShoppingCart } from 'react-icons/md';
+import ProductContext from '../../../src/context/productContext';
 
 export const Products = ({ product }) => {
+  const productContext = useContext(ProductContext);
+  const { addCart } = productContext;
+
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const handleAddToCart = () => {
+    if (product.inCart === false) {
+      addCart(product.product_id);
+      onOpen();
+    }
+  };
+
   return (
     <Box w='100%' borderWidth='1px'>
       <Modal isOpen={isOpen} onClose={onClose}>
@@ -37,7 +50,9 @@ export const Products = ({ product }) => {
             <Button colorScheme='blue' mr={3} onClick={onClose}>
               Continue shopping
             </Button>
-            <Button variant='ghost'>Checkout</Button>
+            <Link to='/cart'>
+              <Button variant='ghost'>Checkout</Button>
+            </Link>
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -69,7 +84,7 @@ export const Products = ({ product }) => {
           leftIcon={<MdAddShoppingCart />}
           colorScheme='pink'
           variant='solid'
-          onClick={onOpen}
+          onClick={handleAddToCart}
         >
           Add to cart
         </Button>
