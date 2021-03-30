@@ -6,7 +6,6 @@ import { CartItem } from './CartItem';
 const Cart = () => {
   const productContext = useContext(ProductContext);
   const cart = productContext.cart;
-  console.log(cart);
   return (
     <Box>
       <Text fontSize='4xl' fontWeight='bold'>
@@ -17,7 +16,11 @@ const Cart = () => {
           Cart is empty
         </Center>
       )}
-      {cart.map((cur) => cur.map((curItem) => <CartItem item={curItem} />))}
+      {cart.map((cur) =>
+        cur.map((curItem) => (
+          <CartItem key={curItem.product_id} item={curItem} />
+        ))
+      )}
     </Box>
   );
 };

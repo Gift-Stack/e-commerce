@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import ProductContext from './productContext';
 import ProductReducer from './productReducer';
 import products from '../products.json';
-import { ADD_CART, SET_CART, GET_PRODUCT } from './types';
+import { ADD_CART, CLEAR_CART, DELETE_PRODUCT } from './types';
 
 const ProductState = (props) => {
   const initialState = {
@@ -19,9 +19,6 @@ const ProductState = (props) => {
   const addCart = async (id) => {
     const data = products;
     const actualData = data.filter((prev) => prev.product_id === id);
-
-    // const map = actualData.map((cur) => cur);
-    // console.log(map);
 
     dispatch({
       type: ADD_CART,
