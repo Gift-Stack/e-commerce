@@ -2,7 +2,7 @@
   {
     "product_name": "Samsung Galaxy S20 plus",
     "product_id": 1,
-    "product_price": "$119",
+    "product_price": "$600",
     "product_avatar": "https://bit.ly/31cUlg1",
     "category": "phones",
     "inCart": true
@@ -10,7 +10,7 @@
   {
     "product_name": "Apple iPhone 8 64gb",
     "product_id": 2,
-    "product_price": "$119",
+    "product_price": "$307.5",
     "product_avatar": "https://bit.ly/3d23GNd",
     "category": "phones",
     "inCart": false
@@ -18,16 +18,16 @@
   {
     "product_name": "Nokia 3310, 2 sims ",
     "product_id": 3,
-    "product_price": "$119",
+    "product_price": "$19",
     "product_avatar": "https://bit.ly/398hPau",
     "category": "phones",
     "inCart": false
   },
   {
-    "product_name": "Apple iPhone X, space grey",
+    "product_name": "Apple iPhone X black case",
     "product_id": 4,
-    "product_price": "$119",
-    "product_avatar": "https://bit.ly/3f97crZ",
+    "product_price": "$11.99",
+    "product_avatar": "https://bit.ly/3cyQ90y",
     "category": "phones",
     "inCart": false
   },

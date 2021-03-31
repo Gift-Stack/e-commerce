@@ -8,7 +8,7 @@ export const Body = () => {
   const [isSmallerThan482] = useMediaQuery('(max-width: 482px)');
   return (
     <Box maxW='100%'>
-      <Text fontSize='4xl' fontWeight='bold'>
+      <Text fontSize='4xl' fontWeight='semibold' textAlign='left' pl={5}>
         Our Products
       </Text>
       <Box p='4'>

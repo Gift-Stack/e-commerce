@@ -7,22 +7,24 @@ import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
   return (
-    <Flex bg='tomato' w='100%' p={3} color='white'>
+    <Flex bg='white' w='100%' p={5} borderBottomWidth={2}>
       <Link to='/'>
         <Flex direction='row'>
           <Text
-            bgGradient='linear(to-l, #7928CA,#FFFFFF)'
-            bgClip='text'
+            color='#FF5A5F'
+            // bgGradient='linear(to-l, pink,#FFFFFF)'
+            // bgClip='text'
             fontWeight='extrabold'
           >
-            Lekkify
+            ST
+            <Icon as={MdGroupWork} w={8} h={8} pt={0} color='#FF5A5F' />
+            RE
           </Text>
-          <Icon as={MdGroupWork} w={8} h={8} color='white.500' />
         </Flex>
       </Link>
       <Spacer />
       <Link to='/cart'>
-        <FaCartPlus />
+        <FaCartPlus color='#FF5A5F' />
       </Link>
     </Flex>
   );
