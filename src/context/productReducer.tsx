@@ -1,6 +1,6 @@
-import { ADD_CART, SET_CART, GET_PRODUCT } from './types';
+import { ADD_CART } from './types';
 
-export default (state, action) => {
+export default (state: any, action: any) => {
   switch (action.type) {
     case ADD_CART:
       return {

@@ -24,17 +24,17 @@ import { MdStar } from 'react-icons/md';
 import { MdAddShoppingCart } from 'react-icons/md';
 import ProductContext from '../../../src/context/productContext';
 
-export const Products = ({ product }) => {
+export const Products = ({ productItem }: any): object => {
   const [isSmallerThan482] = useMediaQuery('(max-width: 482px)');
 
   const productContext = useContext(ProductContext);
-  const { addCart } = productContext;
+  const { addCart }: any = productContext;
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleAddToCart = () => {
-    if (product.inCart === false) {
-      addCart(product.product_id);
+    if (productItem.inCart === false) {
+      addCart(productItem.product_id);
       onOpen();
     }
   };
@@ -44,7 +44,7 @@ export const Products = ({ product }) => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>{product.product_name}</ModalHeader>
+          <ModalHeader>{productItem.product_name}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Grid
@@ -71,7 +71,7 @@ export const Products = ({ product }) => {
         </ModalContent>
       </Modal>
 
-      <Image borderRadius='lg' src={product.product_avatar} />
+      <Image borderRadius='lg' src={productItem.product_avatar} />
       <Box>
         <Flex align='baseline' mt={2} px='2'>
           <Badge colorScheme='pink'>Plus</Badge>
@@ -86,9 +86,9 @@ export const Products = ({ product }) => {
           </Text>
         </Flex>
         <Text mt={2} fontSize='xl' fontWeight='semibold' lineHeight='short'>
-          {product.product_name}
+          {productItem.product_name}
         </Text>
-        <Text mt={2}>{product.product_price}</Text>
+        <Text mt={2}>{productItem.product_price}</Text>
         <Flex mt={2} align='center'>
           <Box as={MdStar} color='orange.400' />
           <Text ml={1} fontSize='sm'>

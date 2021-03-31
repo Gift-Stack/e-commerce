@@ -4,7 +4,7 @@ import ProductReducer from './productReducer';
 import products from '../products.json';
 import { ADD_CART, CLEAR_CART, DELETE_PRODUCT } from './types';
 
-const ProductState = (props) => {
+const ProductState = (props: any) => {
   const initialState = {
     cart: [],
     products,
@@ -16,7 +16,7 @@ const ProductState = (props) => {
   // Get Product
 
   // Add Cart
-  const addCart = async (id) => {
+  const addCart = async (id: number) => {
     const data = products;
     const actualData = data.filter((prev) => prev.product_id === id);
 

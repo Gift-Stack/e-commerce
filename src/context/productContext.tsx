@@ -1,5 +1,5 @@
 import { createContext } from 'react';
 
-const ProductContext = createContext();
+const ProductContext: any = createContext();
 
 export default ProductContext;

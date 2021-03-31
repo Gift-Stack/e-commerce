@@ -1,26 +1,39 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+
 import { Box, Text, Center } from '@chakra-ui/react';
 import ProductContext from '../../context/productContext';
 import { CartItem } from './CartItem';
 
 const Cart = () => {
-  const productContext = useContext(ProductContext);
+  const productContext: any = useContext(ProductContext);
   const cart = productContext.cart;
   return (
     <Box>
-      <Text fontSize='4xl' fontWeight='bold'>
-        Cart
+      <Text fontSize='4xl' textAlign='left' p={5} fontWeight='bold'>
+        Shopping Cart
       </Text>
       {cart.length === 0 && (
-        <Center h='130px' fontSize='3xl' fontStyle='italic' color='GrayText'>
-          Cart is empty
-        </Center>
+        <React.Fragment>
+          <Center fontSize='3xl' fontStyle='italic' color='GrayText'>
+            <Text>Cart is empty</Text>
+            <br />
+          </Center>
+          <Link
+            to='/'
+            style={{ color: '#FF5A5F', textDecoration: 'underline' }}
+          >
+            Back to store
+          </Link>
+        </React.Fragment>
       )}
-      {cart.map((cur) =>
-        cur.map((curItem) => (
-          <CartItem key={curItem.product_id} item={curItem} />
-        ))
-      )}
+      <Box>
+        {cart.map((cur: any) =>
+          cur.map((curItem: any): object => (
+            <CartItem key={curItem.product_id} item={curItem} />
+          ))
+        )}
+      </Box>
     </Box>
   );
 };

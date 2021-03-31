@@ -18,8 +18,8 @@ export const Body = () => {
           } ,1fr)`}
           gap={6}
         >
-          {products.map((product) => (
-            <Products key={product.product_id} product={product} />
+          {products.map((product: any): object => (
+            <Products key={product.product_id} productItem={product} />
           ))}
         </Grid>
       </Box>
