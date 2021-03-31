@@ -5,7 +5,7 @@
     "product_price": "$600",
     "product_avatar": "https://bit.ly/31cUlg1",
     "category": "phones",
-    "inCart": true
+    "inCart": false
   },
   {
     "product_name": "Apple iPhone 8 64gb",
