@@ -1,4 +1,4 @@
-## E-commerce website
+# E-commerce website
 
 This is a frontend [React] project.. Backend to be implemented soon.
 
