@@ -1,4 +1,5 @@
-#E-commerce website
+## E-commerce website
+
 This is a frontend [React] project.. Backend to be implemented soon.
 
 > [The project was built with react typecript](https://github.com/typescript-cheatsheets/react).
